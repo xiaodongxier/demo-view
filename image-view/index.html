@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>{{name}}</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
   <style>
     #app {
@@ -25,7 +25,6 @@
 </head>
 <body>
   <div id="app">
-    {{name}}
     <input type="text" v-model="imgUrl">
     <div class="img-wrap">
       <img :src="imgUrl" alt="">
