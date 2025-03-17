@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{name}}</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  <style>
+    #app {
+      text-align: center;
+    }
+    input{
+      width: 500px;
+      height: 50px;
+      margin: 20px;
+      border: 10px solid #ccc;
+    }
+    .img-wrap {
+      width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="imgUrl">
+    <div class="img-wrap">
+      <iframe :src="imgUrl"></iframe>
+    </div>
+  </div>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data(){
+        return {
+          name: "预览",
+          imgUrl: 'https://cdn.beekka.com/blogimg/asset/202208/bg2022080102.webp'
+        }
+      }
+    })
+  </script>
+</body>
+</html>
